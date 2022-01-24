@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { useState } from "react";
 
-function App() {
+import { AppContainerStyled } from "./App.styled";
+import Navbar from "./pages/Navbar/Navbar";
+import ProductDetails from "./pages/ProductDetails/ProductDetails";
+import { ProductType } from "./Types/ProductType";
+
+import product1 from "./assets/image-product-1.jpg";
+
+const App = () => {
+  const [itemCount, setItemCount] = useState(0);
+
+  const product: ProductType = {
+    title: "Fall Limited Edition Sneakers",
+    description:
+      "These low-profile sneakers are your perfect casual wear companion. Featuring a durable rubber outer sole, they'll withstand everythingthe weather can offer.",
+    price: 125,
+    image: product1,
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <AppContainerStyled>
+      <Navbar itemCount={itemCount} product={product} setItemCount={setItemCount} />
+      <ProductDetails
+        itemCount={itemCount}
+        setItemCount={setItemCount}
+        product={product}
+      />
+    </AppContainerStyled>
   );
-}
+};
 
 export default App;
