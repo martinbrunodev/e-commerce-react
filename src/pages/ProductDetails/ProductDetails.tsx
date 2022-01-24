@@ -19,7 +19,7 @@ import Badge from "../../components/Badge/Badge";
 import { images } from "./images";
 import Modal from "../../components/Modal/Modal";
 
-import { ProductType } from "../../Types/ProductType";
+import { ProductType } from "../../types/ProductType";
 
 interface Props {
   itemCount: number;

@@ -10,7 +10,7 @@ import {
   EmptyCartStyled,
 } from "./Cart.styled";
 
-import { ProductType } from "../../Types/ProductType";
+import { ProductType } from "../../types/ProductType";
 
 interface Props {
   showCart: boolean;

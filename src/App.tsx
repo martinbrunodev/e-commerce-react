@@ -3,7 +3,7 @@ import { useState } from "react";
 import { AppContainerStyled } from "./App.styled";
 import Navbar from "./pages/Navbar/Navbar";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
-import { ProductType } from "./Types/ProductType";
+import { ProductType } from "./types/ProductType";
 
 import product1 from "./assets/image-product-1.jpg";
 

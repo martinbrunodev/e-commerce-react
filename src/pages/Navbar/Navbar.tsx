@@ -16,7 +16,7 @@ import Avatar from "./../../assets/Martín.jpg";
 import { NavbarBadgeStyled } from "./Navbar.styled";
 
 import Cart from "../../components/Cart/Cart";
-import { ProductType } from "../../Types/ProductType";
+import { ProductType } from "../../types/ProductType";
 
 interface Props {
   itemCount: number;
