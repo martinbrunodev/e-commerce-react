@@ -1,8 +1,11 @@
 import { useState } from "react";
+import { ThemeProvider } from "styled-components";
 
-import { AppContainerStyled } from "./App.styled";
 import Navbar from "./pages/Navbar/Navbar";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
+import { AppContainerStyled } from "./App.styled";
+
+import { theme } from "./theme";
 import { ProductType } from "./types/ProductType";
 
 import product1 from "./assets/image-product-1.jpg";
@@ -19,14 +22,20 @@ const App = () => {
   };
 
   return (
-    <AppContainerStyled>
-      <Navbar itemCount={itemCount} product={product} setItemCount={setItemCount} />
-      <ProductDetails
-        itemCount={itemCount}
-        setItemCount={setItemCount}
-        product={product}
-      />
-    </AppContainerStyled>
+    <ThemeProvider theme={theme}>
+      <AppContainerStyled>
+        <Navbar
+          itemCount={itemCount}
+          product={product}
+          setItemCount={setItemCount}
+        />
+        <ProductDetails
+          itemCount={itemCount}
+          setItemCount={setItemCount}
+          product={product}
+        />
+      </AppContainerStyled>
+    </ThemeProvider>
   );
 };
 

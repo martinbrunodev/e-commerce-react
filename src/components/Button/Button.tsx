@@ -8,10 +8,10 @@ interface Props {
   height?: string;
   color?: string;
   fillRule?: string;
-  onClick?: (event: React.MouseEvent<HTMLInputElement>) => void;
+  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
   className?: string
   path?:string
-  type?:string
+  type?: "button" | "submit" | "reset" 
 }
 
 const Button: React.VFC<Props> = ({

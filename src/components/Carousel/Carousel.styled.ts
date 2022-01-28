@@ -11,7 +11,7 @@ export const CurrentImageStyled = styled.img`
   }
 `;
 
-export const ImageStyled = styled.img`
+export const ImageStyled = styled.img<{ selected: boolean }>`
   display: none;
   @media (min-width: 768px) {
     display: flex;

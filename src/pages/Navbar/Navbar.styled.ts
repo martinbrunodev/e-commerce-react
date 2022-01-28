@@ -47,7 +47,7 @@ export const CloseIconStyled = styled(CloseIcon)`
   padding: 2em;
 `;
 
-export const MenuStyled = styled.div`
+export const MenuStyled = styled.div<{ isOpen: boolean }>`
   display: flex;
   flex-direction: column;
   align-items: flex-start;

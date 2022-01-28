@@ -47,7 +47,7 @@ export const CounterDecrementStyled = styled(CounterIncrementStyled)`
   }
 `;
 
-export const CounterBox = styled.div`
+export const CounterBox = styled.div<{ name: string; value: number }>`
   font-family: "Kumbh Sans", sans-serif;
   font-weight: 600;
   font-size: 12px;
