@@ -1,5 +1,10 @@
 import { useState } from "react";
 
+import Carousel from "../../components/Carousel/Carousel";
+import Counter from "../../components/Counter/Counter";
+import Badge from "../../components/Badge/Badge";
+import Modal from "../../components/Modal/Modal";
+
 import {
   ProductDetailsWrapperStyled,
   ProductDetailsHeader,
@@ -12,14 +17,9 @@ import {
   ProductDetailsContainerStyled,
 } from "./ProductDetails.styled";
 
-import Carousel from "../../components/Carousel/Carousel";
-import Counter from "../../components/Counter/Counter";
-import Badge from "../../components/Badge/Badge";
-
 import { images } from "./images";
-import Modal from "../../components/Modal/Modal";
-
 import { ProductType } from "../../types/ProductType";
+
 
 interface Props {
   itemCount: number;

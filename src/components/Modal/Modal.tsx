@@ -1,6 +1,7 @@
 import Carousel from "../Carousel/Carousel";
 
 import { IconStyled, ModalStyled } from "./Modal.styled";
+
 import { images } from "../../pages/ProductDetails/images";
 
 interface Props {

@@ -3,11 +3,11 @@ import { ThemeProvider } from "styled-components";
 
 import Navbar from "./pages/Navbar/Navbar";
 import ProductDetails from "./pages/ProductDetails/ProductDetails";
+
 import { AppContainerStyled } from "./App.styled";
 
 import { theme } from "./theme";
 import { ProductType } from "./types/ProductType";
-
 import product1 from "./assets/image-product-1.jpg";
 
 const App = () => {

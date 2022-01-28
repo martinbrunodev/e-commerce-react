@@ -1,4 +1,7 @@
 import { useState } from "react";
+
+import Button from "../Button/Button";
+
 import {
   CounterFormStyled,
   CounterWrapperStyled,
@@ -6,9 +9,6 @@ import {
   CounterBox,
   CounterDecrementStyled,
 } from "./Counter.styled";
-
-import Button from "../Button/Button";
-
 interface Props {
   setItemCount: React.Dispatch<React.SetStateAction<number>>;
 }

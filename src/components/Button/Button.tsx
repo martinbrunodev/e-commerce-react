@@ -1,5 +1,6 @@
-import { ButtonStyled } from "./Button.styled";
 import Icon from "../Icon/Icon";
+
+import { ButtonStyled } from "./Button.styled";
 
 interface Props {
   label?: string;

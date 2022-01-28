@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 
+import Cart from "../../components/Cart/Cart";
+import Avatar from "./../../assets/Martín.jpg";
+
 import {
   NavStyled,
   NavWrapperStyled,
@@ -9,15 +12,12 @@ import {
   MenuLinkStyled,
   AvatarStyled,
   CartIconStyled,
+  NavbarBadgeStyled,
   CloseIconStyled,
   DividerStyled,
 } from "./Navbar.styled";
-import Avatar from "./../../assets/Martín.jpg";
-import { NavbarBadgeStyled } from "./Navbar.styled";
 
-import Cart from "../../components/Cart/Cart";
 import { ProductType } from "../../types/ProductType";
-
 interface Props {
   itemCount: number;
   product: ProductType;

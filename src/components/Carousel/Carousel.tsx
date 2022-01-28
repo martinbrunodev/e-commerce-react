@@ -5,7 +5,6 @@ import {
   ImageStyled,
   ImageWrapperStyled,
 } from "./Carousel.styled";
-
 interface Props {
   images: string[];
   setOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
