@@ -29,11 +29,11 @@ export const MenuIconStyled = styled(MenuIcon)`
 
 export const LogoStyled = styled.a`
   text-decoration: none;
-  font-weight: 800;
-  font-size: 1.7rem;
+  font-weight: ${(props) => props.theme.fontWeight.extrabold};
+  font-size: ${(props) => props.theme.fontSize.xl};
   padding: 0.5em;
   &:visited {
-    color: #000;
+    color: ${(props) => props.theme.color.colorVariant06};
   }
   @media (min-width: 768px) {
     padding: 0;
@@ -53,7 +53,7 @@ export const MenuStyled = styled.div<{ isOpen: boolean }>`
   align-items: flex-start;
   overflow: hidden;
   height: 100vh;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.color.colorVariant05};
   position: absolute;
   top: 0;
   left: 0;
@@ -75,19 +75,19 @@ export const MenuLinkStyled = styled.a`
   cursor: pointer;
   text-decoration: none;
   transition: all 0.3s ease-in;
-  font-weight: 600;
+  font-weight: ${(props) => props.theme.fontWeight.regular};
   &:visited {
-    color: #000;
+    color: ${(props) => props.theme.color.colorVariant06};
   }
   @media (min-width: 768px) {
     padding: 2.6em 1em;
     font-weight: inherit;
-    color: hsl(219, 9%, 45%);
+    color: ${(props) => props.theme.color.colorVariant01};
     &:visited {
-      color: hsl(219, 9%, 45%);
+      color: ${(props) => props.theme.color.colorVariant01};
     }
     &:hover {
-      border-bottom: 4px solid hsl(26, 100%, 55%);
+      border-bottom: 4px solid ${(props) => props.theme.color.colorVariant02};
     }
   }
 `;
@@ -101,15 +101,15 @@ export const CartIconStyled = styled(CartIcon)`
 export const NavbarBadgeStyled = styled.div`
   border-radius: 50%;
   height: 17px;
-  background-color: hsl(26, 100%, 55%);
+  background-color: ${(props) => props.theme.color.colorVariant02};
   width: 17px;
-  color: white;
+  color: ${(props) => props.theme.color.colorVariant05};
   display: flex;
   justify-content: center;
   position: relative;
   top: -11px;
   right: 30px;
-  font-size: 13px;
+  font-size: ${(props) => props.theme.fontSize.m};
 `;
 
 export const AvatarStyled = styled.img`
@@ -118,7 +118,7 @@ export const AvatarStyled = styled.img`
   cursor: pointer;
 
   &:hover {
-    border: 3px solid hsl(26, 100%, 55%);
+    border: 3px solid ${(props) => props.theme.color.colorVariant02};
   }
 `;
 

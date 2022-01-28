@@ -3,12 +3,12 @@ import styled from "styled-components";
 export const ButtonStyled = styled.button`
   cursor: pointer;
   font-family: "Kumbh Sans", sans-serif;
-  font-weight: 600;
-  font-size: 12px;
+  font-weight: ${(props) => props.theme.fontWeight.regular};
+  font-size: ${(props) => props.theme.fontSize.s};
 
   height: 2.5rem;
-  background-color: hsl(26, 100%, 55%);
-  color: #fff;
+  background-color: ${(props) => props.theme.color.colorVariant02};
+  color: ${(props) => props.theme.color.colorVariant05};
   border-color: transparent;
   border-radius: 6px;
   display: flex;

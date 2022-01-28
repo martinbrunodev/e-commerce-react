@@ -5,7 +5,7 @@ import { ReactComponent as DeleteIcon } from "../../assets/icon-delete.svg";
 export const CartStyled = styled.div`
   width: 70%;
   height: 20%;
-  background-color: #fff;
+  background-color: ${(props) => props.theme.color.colorVariant05};
   border-radius: 6px;
   box-shadow: 5.3px 7.3px 1em -6px #000;
   position: absolute;
@@ -39,12 +39,12 @@ export const ProductWrapperStyled = styled.div`
 `;
 
 export const ProductTitleStyled = styled.p`
-  font-size: 12px;
+  font-size: ${(props) => props.theme.fontSize.s};
   word-spacing: 1px;
   line-height: 20px;
-  color: hsl(219, 9%, 45%);
+  color: ${props => props.theme.color.colorVariant01};
   span {
-    color: #000;
+    color: ${(props) => props.theme.color.colorVariant06};
   }
 `;
 
@@ -75,7 +75,7 @@ export const EmptyCartStyled = styled.p`
   justify-content: center;
   align-items: center;
   padding-top: 3em;
-  font-size: 13px;
-  color: hsl(219, 9%, 45%);
-  font-weight: 700;
+  font-size: ${(props) => props.theme.fontSize.m};
+  color: ${props => props.theme.color.colorVariant01};
+  font-weight: ${(props) => props.theme.fontWeight.bold};
 `;

@@ -21,7 +21,7 @@ export const ImageStyled = styled.img<{ selected: boolean }>`
     cursor: pointer;
     margin-top: 0.7em;
     border-color: 2px;
-    background-color: white;
+    background-color: ${(props) => props.theme.color.colorVariant05};
     &:hover {
       opacity: 0.6;
     }
