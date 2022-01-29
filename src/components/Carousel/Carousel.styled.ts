@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Button from "../Button/Button";
 
 export const CurrentImageStyled = styled.img`
   width: 100%;
@@ -34,4 +35,21 @@ export const ImageStyled = styled.img<{ selected: boolean }>`
 export const ImageWrapperStyled = styled.div`
   display: flex;
   justify-content: space-between;
+`;
+
+export const ArrowNextStyled = styled(Button)`
+  position: absolute;
+  bottom: 30rem;
+  left: 55rem;
+  width: 4.5em;
+  cursor: pointer;
+  background-color: ${(props) => props.theme.color.colorVariant05};
+  border-radius: 50%;
+  max-width: 3em;
+  &:hover {
+    opacity: 1;
+  }
+`;
+export const ArrowPreviousStyled = styled(ArrowNextStyled)`
+  left: 37.5rem;
 `;
