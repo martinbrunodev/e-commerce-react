@@ -20,7 +20,6 @@ import {
 import { images } from "./images";
 import { ProductType } from "../../types/ProductType";
 
-
 interface Props {
   itemCount: number;
   setItemCount: React.Dispatch<React.SetStateAction<number>>;
@@ -42,7 +41,9 @@ const ProductDetails: React.FC<Props> = ({
       <ProductDetailsWrapperStyled>
         <ProductDetailsHeader>SNEAKER COMPANY</ProductDetailsHeader>
         <ProductDetailsTitle>Fall Limited Edition Sneakers</ProductDetailsTitle>
-        <ProductDetailsDescription>{product.description}</ProductDetailsDescription>
+        <ProductDetailsDescription>
+          {product.description}
+        </ProductDetailsDescription>
         <ProductPricesWrapperStyled>
           <ProductDetailsPrice>${product.price}.00</ProductDetailsPrice>
           <Badge label="50%" />

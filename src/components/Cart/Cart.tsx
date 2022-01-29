@@ -18,7 +18,12 @@ interface Props {
   itemCount: number;
   setItemCount: React.Dispatch<React.SetStateAction<number>>;
 }
-const Cart: React.FC<Props> = ({ showCart, product, itemCount, setItemCount }) => {
+const Cart: React.FC<Props> = ({
+  showCart,
+  product,
+  itemCount,
+  setItemCount,
+}) => {
   return showCart ? (
     <>
       <CartStyled>
@@ -34,7 +39,10 @@ const Cart: React.FC<Props> = ({ showCart, product, itemCount, setItemCount }) =
                   {"      "}${itemCount * product.price}.00
                 </span>
               </ProductTitleStyled>
-              <IconStyled color="hsl(219, 9%, 45%)" onClick={()=>setItemCount(0)}/>
+              <IconStyled
+                color="hsl(219, 9%, 45%)"
+                onClick={() => setItemCount(0)}
+              />
             </ProductWrapperStyled>
             <ButtonStyled
               width="0"

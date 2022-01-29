@@ -8,7 +8,7 @@ interface Props {
   onClick?: (event: React.MouseEvent<SVGSVGElement>) => void;
   isClickable?: boolean;
   strokeWidth?: string;
-  stroke?:string
+  stroke?: string;
 }
 
 const Icon: React.VFC<Props> = ({
@@ -28,9 +28,14 @@ const Icon: React.VFC<Props> = ({
       height={height}
       xmlns="http://www.w3.org/2000/svg"
       isClickeable={isClickable}
-      
     >
-      <PathStyled d={path} fill={color} fillRule="nonzero" stroke={stroke} strokeWidth={strokeWidth}/>
+      <PathStyled
+        d={path}
+        fill={color}
+        fillRule="nonzero"
+        stroke={stroke}
+        strokeWidth={strokeWidth}
+      />
     </IconStyled>
   );
 };

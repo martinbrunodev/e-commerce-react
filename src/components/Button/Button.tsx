@@ -13,7 +13,7 @@ interface Props {
   className?: string;
   path?: string;
   type?: "button" | "submit" | "reset";
-  stroke?:string;
+  stroke?: string;
   strokeWidth?: string;
 }
 

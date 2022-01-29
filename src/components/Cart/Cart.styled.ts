@@ -42,7 +42,7 @@ export const ProductTitleStyled = styled.p`
   font-size: ${(props) => props.theme.fontSize.s};
   word-spacing: 1px;
   line-height: 20px;
-  color: ${props => props.theme.color.colorVariant01};
+  color: ${(props) => props.theme.color.colorVariant01};
   span {
     color: ${(props) => props.theme.color.colorVariant06};
   }
@@ -76,6 +76,6 @@ export const EmptyCartStyled = styled.p`
   align-items: center;
   padding-top: 3em;
   font-size: ${(props) => props.theme.fontSize.m};
-  color: ${props => props.theme.color.colorVariant01};
+  color: ${(props) => props.theme.color.colorVariant01};
   font-weight: ${(props) => props.theme.fontWeight.bold};
 `;
