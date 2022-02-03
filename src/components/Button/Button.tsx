@@ -31,7 +31,7 @@ const Button: React.VFC<Props> = ({
   strokeWidth,
 }) => {
   return (
-    <ButtonStyled onClick={onClick} className={className} type={type}>
+    <ButtonStyled onClick={onClick} className={className} type={type} >
       <Icon
         path={icon}
         color={color}

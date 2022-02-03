@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 import {
   CurrentImageStyled,
@@ -9,10 +9,11 @@ import {
 } from "./Carousel.styled";
 interface Props {
   images: { src: string; id: number }[];
+  openModal: boolean;
   setOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
 }
 
-const Carousel: React.VFC<Props> = ({ images, setOpenModal }) => {
+const Carousel: React.VFC<Props> = ({ images, openModal, setOpenModal }) => {
   const [index, setIndex] = useState(0);
   const [currentImage, setCurrentImage] = useState(images[0]);
 
@@ -44,26 +45,30 @@ const Carousel: React.VFC<Props> = ({ images, setOpenModal }) => {
           />
         ))}
       </ImageWrapperStyled>
-      <ArrowPreviousStyled
-        icon="M11 1 3 9l8 8"
-        width="13"
-        height="18"
-        strokeWidth="3"
-        fillRule="evenodd"
-        color="none"
-        stroke="#1D2026"
-        onClick={() => previousImage()}
-      />
-      <ArrowNextStyled
-        icon="m2 1 8 8-8 8"
-        width="13"
-        height="18"
-        strokeWidth="3"
-        fillRule="evenodd"
-        color="none"
-        stroke="#1D2026"
-        onClick={() => nextImage()}
-      />
+      {openModal || window.innerWidth <= 768 ? (
+        <>
+          <ArrowPreviousStyled
+            icon="M11 1 3 9l8 8"
+            width="13"
+            height="18"
+            strokeWidth="3"
+            fillRule="evenodd"
+            color="none"
+            stroke="#1D2026"
+            onClick={() => previousImage()}
+          />
+          <ArrowNextStyled
+            icon="m2 1 8 8-8 8"
+            width="13"
+            height="18"
+            strokeWidth="3"
+            fillRule="evenodd"
+            color="none"
+            stroke="#1D2026"
+            onClick={() => nextImage()}
+          />
+        </>
+      ) : null}
     </div>
   );
 };

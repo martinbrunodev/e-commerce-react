@@ -5,13 +5,14 @@ import { ReactComponent as DeleteIcon } from "../../assets/icon-delete.svg";
 export const CartStyled = styled.div`
   width: 70%;
   height: 20%;
-  background-color: ${(props) => props.theme.color.colorVariant05};
+  background-color: ${({ theme }) => theme.color.colorVariant05};
   border-radius: 6px;
   box-shadow: 5.3px 7.3px 1em -6px #000;
   position: absolute;
   top: 79px;
   right: 45px;
   padding: 1em;
+  z-index: 10000;
 
   @media (min-width: 768px) {
     right: 326px;
@@ -39,12 +40,12 @@ export const ProductWrapperStyled = styled.div`
 `;
 
 export const ProductTitleStyled = styled.p`
-  font-size: ${(props) => props.theme.fontSize.s};
+  font-size: ${({ theme }) => theme.fontSize.s};
   word-spacing: 1px;
   line-height: 20px;
-  color: ${(props) => props.theme.color.colorVariant01};
+  color: ${({ theme }) => theme.color.colorVariant01};
   span {
-    color: ${(props) => props.theme.color.colorVariant06};
+    color: ${({ theme }) => theme.color.colorVariant06};
   }
 `;
 
@@ -75,7 +76,7 @@ export const EmptyCartStyled = styled.p`
   justify-content: center;
   align-items: center;
   padding-top: 3em;
-  font-size: ${(props) => props.theme.fontSize.m};
-  color: ${(props) => props.theme.color.colorVariant01};
-  font-weight: ${(props) => props.theme.fontWeight.bold};
+  font-size: ${({ theme }) => theme.fontSize.m};
+  color: ${({ theme }) => theme.color.colorVariant01};
+  font-weight: ${({ theme }) => theme.fontWeight.bold};
 `;

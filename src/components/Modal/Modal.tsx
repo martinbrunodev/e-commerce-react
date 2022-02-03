@@ -1,6 +1,6 @@
 import Carousel from "../Carousel/Carousel";
 
-import { IconStyled, ModalStyled } from "./Modal.styled";
+import { IconStyled, ModalStyled} from "./Modal.styled";
 
 import { images } from "../../pages/ProductDetails/images";
 
@@ -17,8 +17,8 @@ const Modal: React.FC<Props> = ({ openModal, setOpenModal }) => {
         width="40"
         height="40"
         onClick={() => setOpenModal(false)}
-      />
-      <Carousel images={images} setOpenModal={setOpenModal} />
+      /> 
+      <Carousel images={images} setOpenModal={setOpenModal} openModal={openModal}/>
     </ModalStyled>
   ) : null;
 };

@@ -37,7 +37,7 @@ const ProductDetails: React.FC<Props> = ({
       {openModal ? (
         <Modal openModal={openModal} setOpenModal={setOpenModal} />
       ) : null}
-      <Carousel images={images} setOpenModal={setOpenModal} />
+      <Carousel images={images} setOpenModal={setOpenModal} openModal={openModal} />
       <ProductDetailsWrapperStyled>
         <ProductDetailsHeader>SNEAKER COMPANY</ProductDetailsHeader>
         <ProductDetailsTitle>Fall Limited Edition Sneakers</ProductDetailsTitle>
