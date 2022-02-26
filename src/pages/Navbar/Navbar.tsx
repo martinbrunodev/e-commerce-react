@@ -53,6 +53,7 @@ const Navbar: React.FC<Props> = ({ itemCount, product, setItemCount }) => {
           <AvatarStyled src={Avatar} />
           <Cart
             showCart={showCart}
+            setShowCart={setShowCart}
             product={product}
             itemCount={itemCount}
             setItemCount={setItemCount}

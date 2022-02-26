@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 import Button from "../Button/Button";
-
+import { Props } from "./customTypes";
 import {
   CounterFormStyled,
   CounterWrapperStyled,
@@ -9,11 +9,8 @@ import {
   CounterBox,
   CounterDecrementStyled,
 } from "./Counter.styled";
-interface Props {
-  setItemCount: React.Dispatch<React.SetStateAction<number>>;
-}
 
-const Counter: React.VFC<Props> = ({ setItemCount }) => {
+const Counter = ({ setItemCount }: Props) => {
   const [value, setValue] = useState(0);
 
   const handleIncrement = () => {

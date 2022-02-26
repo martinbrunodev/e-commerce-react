@@ -1,3 +1,7 @@
+import { useEffect, useRef } from "react";
+
+import { Props } from "./customTypes";
+import { useClickOutside } from "../../hooks/useClickOutside";
 import {
   CartStyled,
   CartHeaderStyled,
@@ -10,20 +14,33 @@ import {
   EmptyCartStyled,
 } from "./Cart.styled";
 
-import { ProductType } from "../../types/ProductType";
-
-interface Props {
-  showCart: boolean;
-  product: ProductType;
-  itemCount: number;
-  setItemCount: React.Dispatch<React.SetStateAction<number>>;
-}
-const Cart: React.FC<Props> = ({
+const Cart = ({
   showCart,
   product,
   itemCount,
   setItemCount,
-}) => {
+  setShowCart,
+}: Props) => {
+  const ref = useRef<HTMLDivElement>(null);
+  const closeOnEscapeKeyDown = (event: KeyboardEvent): void => {
+    if (showCart && event.key === "Escape") {
+      setShowCart(false);
+    }
+  };
+
+  const handleCancel = () => {
+    setShowCart(false);
+  };
+
+  useClickOutside([ref], handleCancel);
+
+  useEffect(() => {
+    document.body.addEventListener("keydown", closeOnEscapeKeyDown);
+    return () =>
+      document.body.removeEventListener("keydown", closeOnEscapeKeyDown);
+    //eslint-disable-next-line
+  }, [showCart]);
+
   return showCart ? (
     <>
       <CartStyled>

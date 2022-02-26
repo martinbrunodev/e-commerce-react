@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
+import { Props } from "./customTypes";
 import {
   CurrentImageStyled,
   ImageStyled,
@@ -7,13 +8,8 @@ import {
   ArrowNextStyled,
   ArrowPreviousStyled,
 } from "./Carousel.styled";
-interface Props {
-  images: { src: string; id: number }[];
-  openModal: boolean;
-  setOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
-}
 
-const Carousel: React.VFC<Props> = ({ images, openModal, setOpenModal }) => {
+const Carousel = ({ images, openModal, setOpenModal }: Props) => {
   const [index, setIndex] = useState(0);
   const [currentImage, setCurrentImage] = useState(images[0]);
 

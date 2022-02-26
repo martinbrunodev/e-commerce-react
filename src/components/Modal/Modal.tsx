@@ -1,14 +1,32 @@
+import { useEffect, useRef } from "react";
+
 import Carousel from "../Carousel/Carousel";
-
-import { IconStyled, ModalStyled} from "./Modal.styled";
-
+import { Props } from "./customTypes";
 import { images } from "../../pages/ProductDetails/images";
+import { useClickOutside } from "../../hooks/useClickOutside";
+import { IconStyled, ModalStyled } from "./Modal.styled";
 
-interface Props {
-  openModal: boolean;
-  setOpenModal: React.Dispatch<React.SetStateAction<boolean>>;
-}
-const Modal: React.FC<Props> = ({ openModal, setOpenModal }) => {
+const Modal = ({ openModal, setOpenModal }: Props) => {
+  const ref = useRef<HTMLDivElement>(null);
+
+  const closeOnEscapeKeyDown = (event: KeyboardEvent): void => {
+    if (openModal && event.key === "Escape") {
+      setOpenModal(false);
+    }
+  };
+  const handleCancel = () => {
+    setOpenModal(false);
+  };
+
+  useEffect(() => {
+    document.body.addEventListener("keydown", closeOnEscapeKeyDown);
+    return () =>
+      document.body.removeEventListener("keydown", closeOnEscapeKeyDown);
+    //eslint-disable-next-line
+  }, [openModal]);
+
+  useClickOutside([ref], handleCancel);
+
   return openModal ? (
     <ModalStyled>
       <IconStyled
@@ -17,8 +35,12 @@ const Modal: React.FC<Props> = ({ openModal, setOpenModal }) => {
         width="40"
         height="40"
         onClick={() => setOpenModal(false)}
-      /> 
-      <Carousel images={images} setOpenModal={setOpenModal} openModal={openModal}/>
+      />
+      <Carousel
+        images={images}
+        setOpenModal={setOpenModal}
+        openModal={openModal}
+      />
     </ModalStyled>
   ) : null;
 };

@@ -1,10 +1,7 @@
+import { Props } from "./customTypes";
 import { BadgeStyled } from "./Badge.styled";
 
-interface Props {
-  label: string | number;
-}
-
-const Badge: React.FC<Props> = ({ label }) => {
+const Badge = ({ label }: Props) => {
   return <BadgeStyled>{label}</BadgeStyled>;
 };
 

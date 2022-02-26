@@ -1,23 +1,8 @@
 import Icon from "../Icon/Icon";
-
+import { Props } from "./customTypes";
 import { ButtonStyled } from "./Button.styled";
 
-interface Props {
-  label?: string;
-  icon?: string;
-  width?: string;
-  height?: string;
-  color?: string;
-  fillRule?: string;
-  onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void;
-  className?: string;
-  path?: string;
-  type?: "button" | "submit" | "reset";
-  stroke?: string;
-  strokeWidth?: string;
-}
-
-const Button: React.VFC<Props> = ({
+const Button = ({
   label,
   icon,
   width,
@@ -29,9 +14,9 @@ const Button: React.VFC<Props> = ({
   type,
   stroke,
   strokeWidth,
-}) => {
+}: Props) => {
   return (
-    <ButtonStyled onClick={onClick} className={className} type={type} >
+    <ButtonStyled onClick={onClick} className={className} type={type}>
       <Icon
         path={icon}
         color={color}
