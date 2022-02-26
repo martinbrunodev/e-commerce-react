@@ -1,21 +1,15 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 
 import Carousel from "../Carousel/Carousel";
 import { Props } from "./customTypes";
-import { images } from "../../pages/ProductDetails/images";
-import { useClickOutside } from "../../hooks/useClickOutside";
+import { images } from "../../views/ProductDetails/images";
 import { IconStyled, ModalStyled } from "./Modal.styled";
 
 const Modal = ({ openModal, setOpenModal }: Props) => {
-  const ref = useRef<HTMLDivElement>(null);
-
   const closeOnEscapeKeyDown = (event: KeyboardEvent): void => {
     if (openModal && event.key === "Escape") {
       setOpenModal(false);
     }
-  };
-  const handleCancel = () => {
-    setOpenModal(false);
   };
 
   useEffect(() => {
@@ -24,8 +18,6 @@ const Modal = ({ openModal, setOpenModal }: Props) => {
       document.body.removeEventListener("keydown", closeOnEscapeKeyDown);
     //eslint-disable-next-line
   }, [openModal]);
-
-  useClickOutside([ref], handleCancel);
 
   return openModal ? (
     <ModalStyled>

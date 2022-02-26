@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { ThemeProvider } from "styled-components";
 
-import Navbar from "./pages/Navbar/Navbar";
-import ProductDetails from "./pages/ProductDetails/ProductDetails";
+import Navbar from "./views/Navbar/Navbar";
+import ProductDetails from "./views/ProductDetails/ProductDetails";
 
 import { AppContainerStyled } from "./App.styled";
 
