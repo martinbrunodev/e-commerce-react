@@ -7,7 +7,7 @@ import ProductDetails from "./pages/ProductDetails/ProductDetails";
 import { AppContainerStyled } from "./App.styled";
 
 import { theme } from "./theme";
-import { ProductType } from "./types/ProductType";
+import { ProductType } from "./customTypes/ProductType";
 import product1 from "./assets/image-product-1.jpg";
 
 const App = () => {

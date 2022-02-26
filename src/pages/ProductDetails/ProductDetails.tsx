@@ -18,7 +18,7 @@ import {
 } from "./ProductDetails.styled";
 
 import { images } from "./images";
-import { ProductType } from "../../types/ProductType";
+import { ProductType } from "../../customTypes/ProductType";
 
 interface Props {
   itemCount: number;
@@ -37,7 +37,11 @@ const ProductDetails: React.FC<Props> = ({
       {openModal ? (
         <Modal openModal={openModal} setOpenModal={setOpenModal} />
       ) : null}
-      <Carousel images={images} setOpenModal={setOpenModal} openModal={openModal} />
+      <Carousel
+        images={images}
+        setOpenModal={setOpenModal}
+        openModal={openModal}
+      />
       <ProductDetailsWrapperStyled>
         <ProductDetailsHeader>SNEAKER COMPANY</ProductDetailsHeader>
         <ProductDetailsTitle>Fall Limited Edition Sneakers</ProductDetailsTitle>

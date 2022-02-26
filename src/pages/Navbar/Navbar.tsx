@@ -17,7 +17,7 @@ import {
   DividerStyled,
 } from "./Navbar.styled";
 
-import { ProductType } from "../../types/ProductType";
+import { ProductType } from "../../customTypes/ProductType";
 interface Props {
   itemCount: number;
   product: ProductType;

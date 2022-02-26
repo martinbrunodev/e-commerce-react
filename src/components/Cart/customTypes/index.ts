@@ -1,4 +1,4 @@
-import { ProductType } from "../../../types/ProductType";
+import { ProductType } from "../../../customTypes/ProductType";
 
 export interface Props {
   showCart: boolean;
